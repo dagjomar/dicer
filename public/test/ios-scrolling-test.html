@@ -1,0 +1,62 @@
+
+<html lang="en">
+<head>
+<meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<style>
+body, html {margin: 0; padding: 0; overflow: hidden;}
+#width {width: 100%;}
+#content {position: absolute; top: 50px; left: 0; right: 0; bottom: 50px; overflow: scroll; -webkit-overflow-scrolling: touch;}
+p {margin-bottom: 20px;}
+#header {background: #000; color: #fff; height: 50px; position: fixed; top: 0; width: 100%;}
+#footer {background: #000; color: #fff; height: 50px; position: fixed; bottom: 0; width: 100%;}
+</style>
+<title>iOS Scrolling Demo</title>
+</head>
+
+<body touch-action="none" unresolved>
+<div id="width">
+<div id="header" class="noBounce"> header stuff 2</div>
+
+<div id="content">
+<a href="#" onclick="return doReload();">RELOADsss</a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo arcu, ultricies id aliquam in, hendrerit nec dui. Donec felis elit, molestie in sollicitudin quis, sollicitudin at risus. Sed ac est non diam placerat congue. Nunc diam lacus, malesuada eu vulputate in, porttitor sed nibh. Vestibulum at ipsum porttitor eros porta scelerisque. Cras erat leo, euismod a faucibus ac, adipiscing nec libero. Praesent ligula dolor, euismod ut bibendum vel, bibendum consequat est. Quisque vulputate massa tempus nisi posuere eu lacinia metus blandit. Morbi et urna urna, quis rhoncus dui. Phasellus sit amet mi vitae massa sodales molestie eu vehicula leo. Cras convallis laoreet quam. Ut accumsan, nisi vestibulum lobortis ornare, ipsum sem vehicula nisl, non commodo mauris ante at tellus.</p>
+
+
+
+</div>
+
+<div id="footer" class="noBounce">footer stuff</div>
+</div>
+
+
+<script type="text/javascript" src="vendor/scrollfix.js"></script>
+<script type="text/javascript">
+
+function doReload(){
+    location.reload(true);
+}
+
+//Prevent Header & Footer From Showing Browser Chrome
+
+
+// document.addEventListener('touchstart', function(event) {
+//     event.preventDefault();
+//     return false;
+// }, false);
+
+document.addEventListener('touchmove', function(event) {
+   if(event.target.parentNode.className.indexOf('noBounce') != -1 || event.target.className.indexOf('noBounce') != -1 ) {
+    event.preventDefault(); }
+}, false);
+
+// Add ScrollFix
+var scrollingContent = document.getElementById("content");
+new ScrollFix(scrollingContent);
+
+</script>
+
+</body>
+
+
+</html>

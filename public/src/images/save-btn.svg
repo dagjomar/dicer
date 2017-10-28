@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="136px" height="40px" viewBox="0 0 136 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Save Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Save-Button">
+            <g id="Back-Button" opacity="0.476504198" transform="translate(2.000000, 5.000000)" fill="#FFFFFF">
+                <path d="M8.136,7.008 C4.104,7.008 1.44,8.976 1.44,12.072 C1.44,18.024 10.32,16.248 10.32,19.224 C10.32,20.184 9.48,20.688 8.136,20.688 C6.384,20.688 3.792,19.68 2.064,18.168 L0.408,21.456 C2.4,23.088 5.28,24.144 8.088,24.144 C11.832,24.144 14.808,22.368 14.808,19.008 C14.808,12.936 5.928,14.592 5.928,11.688 C5.928,10.872 6.672,10.464 7.776,10.464 C9.144,10.464 11.376,11.184 13.152,12.216 L14.76,8.88 C13.032,7.752 10.56,7.008 8.136,7.008 Z M30.224,20.904 L22.88,20.904 L21.656,24 L17.264,24 L24.512,7.2 L28.904,7.2 L35.984,24 L31.424,24 L30.224,20.904 Z M28.976,17.664 L26.576,11.448 L24.128,17.664 L28.976,17.664 Z M47.488,24 L54.088,7.2 L49.696,7.2 L45.4,19.56 L41.104,7.2 L36.544,7.2 L43.072,24 L47.488,24 Z M70.896,10.56 L70.896,7.2 L57.744,7.2 L57.744,24 L71.16,24 L71.16,20.64 L62.016,20.64 L62.016,17.256 L70.032,17.256 L70.032,13.896 L62.016,13.896 L62.016,10.56 L70.896,10.56 Z" id="SAVE"></path>
+            </g>
+            <g id="Share-Button" transform="translate(97.000000, 4.000000)" stroke-linecap="round" stroke="#979797" stroke-width="3">
+                <g id="Line-+-Line-+-Line" transform="translate(0.000000, 9.000000)">
+                    <path d="M1.5,0.5 L1.5,19.6049728" id="Line"></path>
+                    <path d="M33.5039062,20 L1.5,20" id="Line"></path>
+                    <path d="M33.5,0.5 L33.5,19.6049728" id="Line"></path>
+                </g>
+                <g id="Line-+-Line-+-Line" transform="translate(9.000000, 0.000000)">
+                    <path d="M8.5,0.5 L8.5,19.6049728" id="Line"></path>
+                    <path d="M8.36338514,6.96331881e-13 L1.35562107,7.00776386" id="Line"></path>
+                    <path d="M15.6551266,6.96331881e-13 L8.6473625,7.00776386" id="Line" transform="translate(12.145871, 4.000000) scale(-1, 1) translate(-12.145871, -4.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

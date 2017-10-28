@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Dicer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Dicer">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta http-equiv="cleartype" content="on">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <link type="text/css" rel="stylesheet" href="src/app.css" />
+    <link type="text/css" rel="stylesheet" href="src/editView.css" />
+
+    <!-- <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <div id="root" class="fixed no-select">
+
+    <div id="empty-state-page" class="page no-select" style="display: none;">
+
+        <div class="vertical-center-wrapper">
+
+            <div class="top-bar">
+                <img style="position:relative; top: 56px;" src="src/images/dicer-heading.svg" width="167" height="92">
+            </div>
+            <div id="middle-bar" class="middle-bar">
+                <input class="off-page" type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+                <button onclick="document.querySelector('input').click()" class="start-btn no-webkit-appearance needsclick"></button>
+            </div>
+
+
+            <div id="bottom-bar" class="bottom-bar" style="flex-grow: 1; ">
+                <div class="horizontal-controls" style="justify-content: center;">
+                    <a style="opacity: 0.1;" href="#" onclick="return location.reload(true);">RELOAD</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="preview-page" class="page no-select" style="display: none;">
+
+        <div class="vertical-center-wrapper stretch">
+
+            <div class="top-bar stretch" id="preview-container">
+                <!-- <div class="photo-preview-wrapper" id="photo-preview-wrapper" >
+                </div> -->
+                <div class="button-controls">
+                    <a class="" href="#" onclick="return location.reload(true);">RELOADsss</a>
+                    <br />
+                    <a id="testlink" class="" target="_blank" href="test/test-images/example-portrait.jpg">TEST LINK</a>
+                </div>
+
+            </div>
+
+
+            <div id="bottom-bar" class="bottom-bar" style="flex-grow: 0; height: 44px; background: rgb(23, 21, 21);">
+                <div class="horizontal-controls">
+                    <img onclick="startEmptyState()" src="src/images/back-btn.svg" width="61" height="20" style="margin: 15px;"">
+                    <span style="width:61px; margin: 15px;">&nbsp;</span>
+                    <img onclick="openFinalImage()" src="src/images/save-btn.svg" width="68" height="20" style="margin: 15px;"">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- 
+    <div id="edit-page" class="page" style="display: none;">
+
+        <div class="vertical-center-wrapper stretch">
+            <div class="top-bar stretch">
+                <div class="photo-preview-wrapper" >
+                    <canvas class="edit-canvas photo-container" id="edit-canvas"></canvas>
+                </div>
+                <div class="button-controls">
+                    <a class="" href="#" onclick="return location.reload(true);">RELOADsss</a>
+                    <br />
+                    <a id="testlink" class="" target="_blank" href="test/test-images/example-portrait.jpg">TEST LINK</a>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+
+
+    </div>
+
+
+    <script type="text/javascript" src="vendor/exif.js"></script>
+
+    <script src="src/image.js"></script>
+    <script src="src/editView.js"></script>
+    <script src="src/photoEditor.js"></script>
+    <script src="src/app.js"></script>
+
+
+    <script src="vendor/fastclick.min.js" data-no-instant></script>
+
+    <script type="text/javascript" src="vendor/scrollfix.js"></script>
+
+    <script type="text/javascript">
+
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            var attachFastClick = Origami.fastclick;
+            attachFastClick(document.getElementById("root"));
+        }, false);
+    }
+
+
+    </script>
+</body>
+
+</html>

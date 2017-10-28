@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+.no-select{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.select{
+  -webkit-touch-callout: initial; /* iOS Safari */
+    -webkit-user-select: initial; /* Safari */
+     -khtml-user-select: initial; /* Konqueror HTML */
+       -moz-user-select: initial; /* Firefox */
+        -ms-user-select: initial; /* Internet Explorer/Edge */
+            user-select: initial; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+html{
+  touch-action: manipulation;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+body, html{
+    margin: 0px;
+    padding: 0px;
+    background: #fc0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    //-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+div, button, a{
+    border: 0;
+    outline: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+.no-webkit-appearance{
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+
+    /* https://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/ */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+
+.off-page{
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+    visibility: hidden;
+}
+
+// .custom-file-input::-webkit-file-upload-button {
+//   visibility: hidden;
+// }
+// .custom-file-input::before {
+//   content: 'Select some files';
+//   display: inline-block;
+//   background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+//   border: 1px solid #999;
+//   border-radius: 3px;
+//   padding: 5px 8px;
+//   outline: none;
+//   white-space: nowrap;
+//   -webkit-user-select: none;
+//   cursor: pointer;
+//   text-shadow: 1px 1px #fff;
+//   font-weight: 700;
+//   font-size: 10pt;
+// }
+// .custom-file-input:hover::before {
+//   border-color: black;
+// }
+// .custom-file-input:active::before {
+//   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+// }
+
+.page{
+    height: 100%;
+    width: 100%;
+}
+
+.fixed{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: white;
+    background-image: url(images/app-background-1.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+
+.start-btn{
+
+    display: inline-block;
+    // position: absolute;
+    width: 110px;
+    height: 136px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // top: 10px;
+    cursor: pointer;
+
+    background: none;
+    background-image: url(images/start-btn.svg);
+    background-size: 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+.start-btn:active{
+    background-image: url(images/start-btn-hover.svg);
+}
+
+.vertical-center-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.vertical-center-wrapper.stretch{
+    align-items: stretch;
+    justify-content: stretch;
+}
+.top-bar, .middle-bar, .bottom-bar{
+    flex-grow: 1;
+    position: relative;
+}
+.top-bar{
+    display: flex;
+    align-items: flex-start;
+}
+.top-bar.stretch{
+    align-items: stretch;
+}
+.middle-bar{
+    display: flex;
+    align-items: center;
+}
+.bottom-bar{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+.bottom-bar .horizontal-controls{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-controls{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+}
+
+.photo-preview-wrapper{
+    background: rgb(0, 0, 0);
+    flex-grow: 1;
+    position: relative;
+}
+.photo-container{
+    width: 100%;
+    max-width: 100%;
+    // max-height: 100%;
+    background: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.save-photo-button-wrapper{
+    position: relative;
+}
+.save-photo-element{
+    width: 100px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid white;
+    overflow: hidden;
+    background: white;
+    display: block;
+    position: relative;
+}
+.save-photo-button-wrappesr::after{
+    content: 'sasdfdsa f ';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: white;
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.test{
+    position: relative;
+    z-index: 999;
+    pointer-events: all;
+}
+
+.edit-canvas{
+    width: 100%;
+    height: 100%;
+}

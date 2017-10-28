@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Remove rubberband scrolling from web apps on mobile safari (iOS)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <style>
+    html, body {margin: 0; padding: 0; overflow: hidden}
+  </style>
+  
+</head>
+<body onload="onLoad()">
+
+    <h1>No bounce</h1>
+
+    <a href="#" onclick="return doReload();">RELOADsss</a>
+
+    <p>Try pulling down this page with touch in iPhone/iPad, nothing happens! No rubberband scroll.</p>
+
+  <script>
+    function doReload(){
+        location.reload(true);
+    }
+
+    document.body.addEventListener('touchmove', function(event) {
+      console.log(event.source);
+      //if (event.source == document.body)
+        event.preventDefault();
+    }, false);
+
+    window.onresize = function() {
+        document.body.style.width=window.innerWidth + "px";
+        document.body.style.height=window.innerHeight + "px";
+    }
+
+
+    function onLoad(){
+        window.onresize();
+    }
+
+  </script>
+</body>
+</html>
